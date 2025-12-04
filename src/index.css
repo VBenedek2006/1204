@@ -1,36 +1,27 @@
 :root {
-  --bg: #f7f8fb;
+  --bg: #f9fafb;
   --surface: #ffffff;
-  --text: #0f172a;
+  --text: #111827;
   --muted: #6b7280;
-  --accent: #2563eb;
-  --radius: 12px;
-  --gap: 20px;
-  --maxw: 1100px;
-  --shadow: 0 8px 24px rgba(15,23,42,0.06);
-  --glass: rgba(255,255,255,0.6);
+  --accent: #3b82f6;
+  --radius: 8px;
+  --gap: 16px;
+  --maxw: 960px;
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  --glass: rgba(255, 255, 255, 0.8);
 
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.5;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
   font-weight: 400;
   color: var(--text);
-  background: linear-gradient(180deg, var(--bg), #ffffff 60%);
+  background: var(--bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
-  padding: 36px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,36 +38,47 @@ body {
 }
 
 h1, h2, h3 {
-  margin: 0 0 12px 0;
+  margin: 0 0 16px 0;
   color: var(--text);
+  font-weight: 600;
 }
 
 p {
-  margin: 0 0 14px 0;
+  margin: 0 0 12px 0;
   color: var(--muted);
+}
+
+a {
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  color: darken(var(--accent), 10%);
 }
 
 button {
   border-radius: var(--radius);
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  border: 1px solid var(--accent);
+  padding: 0.5em 1em;
   font-size: 1em;
   font-weight: 500;
   background-color: var(--accent);
   color: #fff;
   cursor: pointer;
-  transition: transform 0.12s ease, box-shadow 0.12s ease;
-  box-shadow: var(--shadow);
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
 button:hover {
+  background-color: darken(var(--accent), 10%);
   transform: translateY(-2px);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   body {
-    padding: 20px;
+    padding: 16px;
   }
   .container {
-    padding: 0 10px;
+    padding: 0 8px;
   }
 }
+
